@@ -1,14 +1,67 @@
-.App {
-  text-align: center;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App, .App-header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.result {
+  grid-area: result;
+}
+.button [name="1"] {
+  grid-area: 1;
+}
+.button [name="2"] {
+  grid-area: 2;
+}
+.button [name="3"] {
+  grid-area: 3;
+}
+
+.button [name="-"] {
+  grid-area: minus;
+}
+
+.button [name="4"] {
+  grid-area: 4;
+}
+.button [name="5"] {
+  grid-area: 5;
+}
+.button [name="6"] {
+  grid-area: 6;
+}
+
+.button [name="7"] {
+  grid-area: 7;
+}
+.button [name="8"] {
+  grid-area: 8;
+}
+.button [name="9"] {
+  grid-area: 9;
+}
+
+.button [name="="] {
+  grid-area: 10;
+}
+
+.button [name="0"] {
+  grid-area: 0;
+}
+.button [name="C"] {
+  grid-area: C ;
+}
+.button [name="CE"] {
+  grid-area: CE;
+}
+
+
+.calculator {
+  background-color: #697180;
+  display: grid;
+  grid-template-columns: 60px 60px 60px 90px;
+  grid-template-rows: 100px 60px 60px 60px 60px;
 }
