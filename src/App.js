@@ -30,7 +30,7 @@ class App extends Component {
   calculate = () => {
     try {
       this.setState({
-        result: "I have discalculia *Link*"
+        result: <div className="dycalculia"><p>Sorry, I have</p> <a href="https://en.wikipedia.org/wiki/Dyscalculia" target="_blank" rel="noopener noreferrer" >dyscalculia</a></div> 
       })
     }
 
@@ -58,9 +58,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <p>
+          <h3>
             Subtraction Calculator
-          </p>
+          </h3>
+          <p>Use the num pad to perform a calculation.</p>
         </header>
         <div className="calculator">
           <Result result={this.state.result} />
