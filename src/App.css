@@ -1,122 +1,120 @@
 @font-face {
-  font-family: 'digital-7';
-  src: url(fonts/digital-7.ttf);
+    font-family: 'digital-7';
+    src: url(fonts/digital-7.ttf);
 }
 
 .App, .App-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    padding: 5px 8px;
 }
 
 a {
-  color: #6cabd6;
+    color: #6cabd6;
 }
 
 .buttons {
-  display: grid;
-  grid-template-columns: repeat(5, auto);
-  grid-template-rows: repeat(4, 60px);
-  grid-template-areas: 
-    "1 2 3 minus minus "
-    "4 5 6 minus minus "
-    "7 8 9 equals equals"
-    "C 0 CE equals equals";
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(4, 60px);
+    grid-template-areas: "1 2 3 minus minus " "4 5 6 minus minus " "7 8 9 equals equals" "C 0 CE equals equals";
 }
 
 button {
-  font-size: 18px;
-  background-color:#fff;
-  cursor: pointer;
+    font-size: 18px;
+    background-color: #fff;
+    border: 1px solid rgb(216, 216, 216);
+    cursor: pointer;
 }
 
 button:focus {
-  outline:0;
+    outline: 0;
 }
 
 .result {
-  text-align: right;
-  min-height: 95px;
-  width: 330px;
-  grid-area: result;
-  background-color: #000;
-  font-family:'digital-7';
-  padding: 0 10px;
-  overflow-wrap: break-word;
-  font-size: 30px;
-  color: #e1e1e1;
+    text-align: right;
+    min-height: 96px;
+    width: 330px;
+    grid-area: result;
+    background-color: #000;
+    font-family: 'digital-7';
+    padding: 0 10px;
+    overflow-wrap: break-word;
+    font-size: 30px;
+    color: #e8e8e8;
 }
 
 button[name="1"] {
-  grid-area: "1";
- }
+    grid-area: "1";
+}
 
 button[name="2"] {
-  grid-area: "2";
- }
+    grid-area: "2";
+}
 
 button[name="3"] {
-  grid-area: "3";
- }
+    grid-area: "3";
+}
 
 button[name="-"] {
-  grid-area: minus;
-  background-color: #e1e1e1;
- }
+    grid-area: minus;
+    background-color: #e8e8e8;
+    font-size: 30px;
+}
 
 button[name="4"] {
-  grid-area: "4";
- }
+    grid-area: "4";
+}
 
 button[name="5"] {
-  grid-area: "5";
- }
+    grid-area: "5";
+}
 
 button[name="6"] {
-  grid-area: "6";
- }
+    grid-area: "6";
+}
 
 button[name="7"] {
-  grid-area: "7";
- }
+    grid-area: "7";
+}
 
 button[name="8"] {
-  grid-area: "8";
- }
+    grid-area: "8";
+}
 
 button[name="9"] {
-  grid-area: "9";
- }
+    grid-area: "9";
+}
 
 button[name="="] {
-  grid-area: equals;
-  background-color: #e1e1e1;
- }
+    grid-area: equals;
+    background-color: #e8e8e8;
+    font-size: 30px;
+}
 
 button[name="0"] {
-  grid-area: "0";
- }
+    grid-area: "0";
+}
 
 button[name="C"] {
-  grid-area: C;
-  background-color: #e1e1e1;
- }
+    grid-area: C;
+    background-color: #e8e8e8;
+}
 
 button[name="CE"] {
-  grid-area: CE;
-  background-color: #e1e1e1;
- }
+    grid-area: CE;
+    background-color: #e8e8e8;
+}
 
 
 .calculator {
-  background-color: #697180;
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  grid-template-areas: 
-    "result"
-    "buttons";
+    background-color: #697180;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "result" "buttons";
 }
