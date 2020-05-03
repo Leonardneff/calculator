@@ -8,7 +8,8 @@ class App extends Component {
     super();
 
     this.state= {
-      result: ""
+      result: "",
+      text: false
     }
   }
 
@@ -18,9 +19,15 @@ class App extends Component {
       this.calculate()
     } else if (button === "C") {
       this.reset()
+      this.setState({text:false})
     } else if (button === "CE") {
       this.backspace()
-    } else {
+      this.setState({text:false})
+    } else if (this.state.text) {
+      this.reset()
+      this.setState({text:false})
+    }
+    else {
       this.setState({
         result: this.state.result + button
       })
@@ -30,7 +37,8 @@ class App extends Component {
   calculate = () => {
     try {
       this.setState({
-        result: <div className="dycalculia"><p>Sorry, I have</p> <a href="https://en.wikipedia.org/wiki/Dyscalculia" target="_blank" rel="noopener noreferrer" >dyscalculia</a></div> 
+        result: <div className="dycalculia"><span>Sorry, I have</span> <a href="https://en.wikipedia.org/wiki/Dyscalculia" target="_blank" rel="noopener noreferrer">dyscalculia</a></div>,
+        text: true
       })
     }
 
@@ -59,12 +67,12 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h3>
-            Subtraction Calculator
+            Calculating Difference
           </h3>
-          <p>Use the num pad to perform a calculation.</p>
+          <p>Use the numeric keypad to perform a calculation.</p>
         </header>
         <div className="calculator">
-          <Result result={this.state.result} />
+          <Result result={this.state.result} text={this.state.text} />
           <KeyPad onClick={this.onClick} />
           </div>
       </div>
