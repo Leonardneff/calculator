@@ -1,1 +1,1 @@
-This is a calculator web app and also my homework for KISD application 2020.
+This is a calculator web app and also my homework for KISD application.
